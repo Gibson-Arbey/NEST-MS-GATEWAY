@@ -12,3 +12,4 @@ El gateway es el enlace entre nuestros clientes y nuestros servicios. Es el enca
 3. Crear un archivo `.env` basado en el `env.template`
 4. Levantar los microservicios que se van a consumir
 5. Ejecutar `npm run start:dev`
+6. Levantar servidor NATS con el siguiente comando `docker run -d --name nats-main -p 4222:4222 -p 8222:8222 nats`  

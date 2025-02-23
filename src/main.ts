@@ -6,6 +6,7 @@ import { RpcCustomExceptionFilter } from './common/exception/rpc-custom-exceptio
 
 async function main() {
   const logger = new Logger('MS-GATEWAY');
+  logger.log(`Servidores NATS activos: ${envs.natsServers}`);
   const app = await NestFactory.create(AppModule);
   app.setGlobalPrefix('api');
   app.useGlobalFilters(new RpcCustomExceptionFilter())

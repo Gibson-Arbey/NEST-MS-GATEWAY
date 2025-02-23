@@ -11,7 +11,7 @@ import {
 } from '@nestjs/common';
 import { ClientProxy, RpcException } from '@nestjs/microservices';
 import { catchError } from 'rxjs';
-import { ORDER_SERVICE } from 'src/config/services';
+import { NATS_SERVICE, } from 'src/config/services';
 import { PaginationDto } from 'src/common/dto/pagination.dto';
 import { CreateOrderDto } from './dto/create-order.dto';
 import { StatusDto } from './dto/status.dto';
@@ -19,7 +19,7 @@ import { StatusDto } from './dto/status.dto';
 @Controller('orders')
 export class OrdersController {
   constructor(
-    @Inject(ORDER_SERVICE) private readonly ordersClient: ClientProxy,
+    @Inject(NATS_SERVICE) private readonly ordersClient: ClientProxy,
   ) {}
 
   @Post()

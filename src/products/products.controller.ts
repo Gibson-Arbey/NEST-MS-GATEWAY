@@ -12,7 +12,7 @@ import {
 } from '@nestjs/common';
 import { CreateProductDto } from './dto/create-product.dto';
 import { ClientProxy, RpcException } from '@nestjs/microservices';
-import { PRODUCT_SERVICE } from 'src/config/services';
+import { NATS_SERVICE } from 'src/config/services';
 import { PaginationDto } from 'src/common/dto/pagination.dto';
 import { catchError } from 'rxjs';
 import { UpdateProductDto } from './dto/update-product.dto';
@@ -20,7 +20,7 @@ import { UpdateProductDto } from './dto/update-product.dto';
 @Controller('products')
 export class ProductsController {
   constructor(
-    @Inject(PRODUCT_SERVICE) private readonly productsClient: ClientProxy,
+    @Inject(NATS_SERVICE) private readonly productsClient: ClientProxy,
   ) {}
 
   @Post()
