@@ -8,15 +8,15 @@ import { envs } from 'src/config/envs';
   controllers: [OrdersController],
   imports: [
     ClientsModule.register([
-          {
-            name: ORDER_SERVICE,
-            transport: Transport.TCP,
-            options: {
-              host: envs.ordersMicroserviceHost,
-              port: envs.ordersMicroservicePort,
-            },
-          },
-        ]),
-  ]
+      {
+        name: ORDER_SERVICE,
+        transport: Transport.TCP,
+        options: {
+          host: envs.ordersMicroserviceHost,
+          port: envs.ordersMicroservicePort,
+        },
+      },
+    ]),
+  ],
 })
 export class OrdersModule {}
