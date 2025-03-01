@@ -5,6 +5,8 @@
 # MS-GATEWAY
 El gateway es el enlace entre nuestros clientes y nuestros servicios. Es el encargado de recibir las peticiones, enviarlas a los servicios correspondientes y devolver la respuesta al cliente.
 
+<img align="left" alt="Arquitectura" src="assets/arquitectura.png" style="margin: 10px">
+
 ## Levantar el proyecto
 
 1. Clonar el repositorio
